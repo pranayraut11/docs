@@ -4,3 +4,8 @@
 ```
 keytool -import -alias example -keystore  "C:\Program Files\Java\jdk-17\lib\security\cacerts" -file example1.cer
 ```
+
+### Build docker images for all projects
+```
+ find . -name "pom.xml" -exec mvn clean install -Dmaven.test.skip=true  jib:build -f '{}' \;
+```
