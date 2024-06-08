@@ -9,3 +9,7 @@ keytool -import -alias example -keystore  "C:\Program Files\Java\jdk-17\lib\secu
 ```
  find . -name "pom.xml" -exec mvn clean install -Dmaven.test.skip=true  jib:build -f '{}' \;
 ```
+### Delete docker images by patter
+```
+ docker rmi $(docker images | grep pattern | tr -s ' ' | cut -d ' ' -f 3)
+```
