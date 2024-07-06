@@ -13,3 +13,14 @@ keytool -import -alias example -keystore  "C:\Program Files\Java\jdk-17\lib\secu
 ```
  docker rmi $(docker images | grep pattern | tr -s ' ' | cut -d ' ' -f 3)
 ```
+### If you see errors like
+
+Temporary failure resolving 'download.docker.com'
+Ign:2 http://archive.ubuntu.com/ubuntu <br>
+or
+access related errors <br>
+Update file /etc/resolve.conf with following content
+```
+nameserver 8.8.8.8
+nameserver 8.8.4.4  
+```
