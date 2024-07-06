@@ -19,7 +19,7 @@ Temporary failure resolving 'download.docker.com'
 Ign:2 http://archive.ubuntu.com/ubuntu <br>
 or
 access related errors <br>
-Update file /etc/resolve.conf with following content
+Update file /etc/resolv.conf with following content
 ```
 nameserver 8.8.8.8
 nameserver 8.8.4.4  
