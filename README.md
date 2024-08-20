@@ -24,3 +24,7 @@ Update file /etc/resolv.conf with following content
 nameserver 8.8.8.8
 nameserver 8.8.4.4  
 ```
+### Remove all containers
+```
+docker rm -v -f $(docker ps -qa)
+```
